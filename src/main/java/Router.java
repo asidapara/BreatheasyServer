@@ -23,8 +23,8 @@ import static spark.Spark.port;
 public class Router {
     int id = 1;
 
-
-    public static MongoClientURI uri  = new MongoClientURI("mongodb://asidapara:orhynnyoj7@ds041404.mongolab.com:41404/breatheasy");
+    public static String address = null;
+    public static MongoClientURI uri  = new MongoClientURI(address);
     public static MongoClient client= new MongoClient(uri);
     public static DB db = client.getDB(uri.getDatabase());
     public static Logger mongoLogger = Logger.getLogger( "org.mongodb.driver");
